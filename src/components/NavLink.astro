@@ -1,8 +1,8 @@
 ---
-const  {link, title}  = Astro.props;
+const  {href, text}  = Astro.props;
 
 ---
 
-<a href={link} class=" my-auto mx-10 text-2xl font-serif object-cover text-gray-900 dark:text-white hover:underline  ">
-    {title}
+<a href={href} class=" text-2xl font-serif object-cover text-slate-300 hover:underline  ">
+    {text}
 </a>
