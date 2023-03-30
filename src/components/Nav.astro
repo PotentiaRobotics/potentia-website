@@ -10,21 +10,24 @@ import NavLink from "./NavLink.astro";
 
   <!-- Logo -->
   <a href="/">
-      <img src={logo} alt="Logo" class="my-2 h-10 ml-2" /> 
+      <img src={logo} alt="Logo" class="mt-4 mb-2 h-10 ml-4 " /> 
   </a>
 
   <!-- Desktop Pages -->
-  <div class="flex flex-row   visible max-sm:hidden my-auto mr-20  text-sm space-x-6 max-lg:space-x-10  max-md:space-x-4 ">
-
-    <NavLink href="#" text="Page 1" class="nav" />
-    <NavLink href="#" text="Page 2" class="nav" />
-    <NavLink href="#" text="Home" class="nav"/>
+  <div class="flex flex-row  visible max-sm:hidden my-auto mr-4  text-sm space-x-6 ">
+    <div class="mt-2 space-x-5 max-lg:space-x-10  max-md:space-x-4">
+      <NavLink href="/" text="About Us"  />
+      <NavLink href="/" text="Timeline" />
+      <NavLink href="/" text="Olympian" />
+      <NavLink href="/" text="Sponsors" />
+      <NavLink href="/" text="Contact" />
+    </div>
     
     <a href="/">
-      <button class="outline outline-purple-400  px-2 rounded-md
-      shadow-lg 
+      <button class="outline outline-purple-400  px-4 rounded-md
+      shadow-lg  py-1 mt-1
       text-white font-mono font-bold text-xl hover:bg-slate-100
-      hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Login</button>
+      hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Donate</button>
   </a>
     
     
@@ -33,8 +36,8 @@ import NavLink from "./NavLink.astro";
  
   
   <!-- Hamburger button -->
-  <button type="button" id='burg' class="block text-gray-500 hover:text-white focus:text-white focus:outline-none mr-10 visible sm:hidden">
-    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+  <button type="button" id='burg' class="mt-2 block text-gray-500 hover:text-white focus:text-white focus:outline-none mr-10 visible sm:hidden">
+    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24 ">
       <path id="ham" class="visible"  fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
       <path id="x" class="hidden"  fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
 
@@ -90,8 +93,23 @@ import NavLink from "./NavLink.astro";
   });
 
 
-  // Remove the navlinks when the screen gets too small
-  
+  // Remove mobile menu once screen size goes back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) {
+      links.classList.add('hidden');
+    }
+  });
+  // Also change the icon back
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) {
+      ham.classList.remove('hidden');
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) {
+      x.classList.add('hidden');
+    }
+  });
   
 </script>
 

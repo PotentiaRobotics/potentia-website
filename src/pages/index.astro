@@ -6,24 +6,57 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 //Image import
-import mountain from '../images/mountain.jpg';
+import olympian_hero from '../images/olympian_hero.png';
+import team_pic from '../images/team_pic.png';
+
 ---
 
+
 <Layout>
-  <div class="bg-black h-52 w-full relative">
-    <img src={mountain}  alt="" class="w-full h-full object-cover absolute bg-fixed"> 
+  <!-- Nav -->
+  <Nav></Nav>
+
+ 
+    <div class="relative">
+        <img src={olympian_hero} class="brightness-50 contrast-75 object-none w-full  h-[44rem]" />
+
+        <div class="absolute top-48 left-1/2  -translate-x-1/2 -translate-y-1/2">
+          <h1 class="font-bold text-7xl  font-sans text-center text-white ">Potentia Robotics</h1>
+          <h2 class="font-bold  text-center text-xl mt-10 font-sans text-red-600 italic">The first high school team to design and build a walking humanoid robot.        </h1>
+        </div>
+    </div>
+
+    <div class=" flex flex-row pb-20" >
+      <div class="ml-20 mt-20">
+        <h1 class="text-3xl text-cyan-800 font-bold ">Who We Are</h1>
+        <div class="mt-6 mr-20">
+
+          <p class=" text-lg ">Potentia Robotics is the <span class="font-bold">first high school team</span>  to design and build a <span class="font-bold">fully-functional humanoid robot</span> entirely from scratch. It's run by students from the Thomas Jefferson High School for Science and Technology (TJHSST).</p>
+          <p class="mt-6 text-lg ">At Potentia Robotics, we want to push the boundaries of what high-school students can achieve. Our ultimate goal is to <span class="font-bold">further STEM knowledge</span>  in the K-12 community while leading by example and showing other students that age isn't a limiting factor for any project, no matter how large-scale.</p>
 
 
+        </div>
 
-    <div class="absolute w-full ">
-      <Nav></Nav>
+      </div>
+      <div class="mr-60 mt-20">
+         <img src={team_pic} alt="" class="w-[120em] ">
+         <a href="/team" >
+          <button class=" outline outline-orange-400   rounded-md
+          shadow-lg  py-2 px-4 mt-7
+          text-white bg-cyan-700 font-mono font-bold text-xl hover:bg-white
+          hover:text-cyan-400 hover:shadow-cyan-600  transition-all duration-300">Meet the Team -> </button>
+      </a>
+      </div>
+
+
 
     </div>
-  </div>
-  <div class="h-96 bg-slate-500"></div>
-  <div class="h-96 bg-slate-500"></div>
+
+ 
 	
 
   
-  <Footer></Footer>
+<Footer></Footer>
 </Layout>
+
+
