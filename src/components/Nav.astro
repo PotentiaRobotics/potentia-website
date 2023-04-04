@@ -1,43 +1,52 @@
 ---
 // Image imports
 import logo from "../images/logo.png";
-// Components
-import NavLink from "./NavLink.astro";
+// Components---
 ---
 
-<header class="h-auto bg-slate-800 ">
-<div class=" flex flex-row justify-between ">
+<header class="h-auto bg-slate-800  " id="nav">
+<div class=" flex flex-row justify-between mx-12 ">
 
   <!-- Logo -->
-  <a href="/">
-      <img src={logo} alt="Logo" class="mt-4 mb-2 h-10 ml-4 " /> 
-  </a>
+  <div>
+    <a href="/">
+        <img src={logo} alt="Logo" class="mt-8 mb-2 h-14  " /> 
+    </a>
+
+
+  </div>
 
   <!-- Desktop Pages -->
-  <div class="flex flex-row  visible max-sm:hidden my-auto mr-4  text-sm space-x-6 ">
-    <div class="mt-2 space-x-5 max-lg:space-x-10  max-md:space-x-4">
-      <NavLink href="/" text="About Us"  />
-      <NavLink href="/" text="Timeline" />
-      <NavLink href="/" text="Olympian" />
-      <NavLink href="/" text="Sponsors" />
-      <NavLink href="/" text="Contact" />
-    </div>
+  <div class="flex flex-row max-md:hidden my-auto mr-4 mt-12 text-sm space-x-6 ">
     
-    <a href="/">
-      <button class="outline outline-purple-400  px-4 rounded-md
-      shadow-lg  py-1 mt-1
-      text-white font-mono font-bold text-xl hover:bg-slate-100
-      hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Donate</button>
-  </a>
-    
+    <div class="text-xl font-mono space-x-24 max-lg:space-x-12 text-slate-300  duration-500 max-md:space-x-4  object-cover">
+      
+      <a href="/"  class="hover:text-gray-400">TEAM</a>
+      <a href="/" class="hover:text-gray-400">O L Y M P I A N</a>
+      <a href="/" class="hover:text-gray-400">CONTACT</a>
+    </div>  
     
   </div>
   
+<!-- Button -->
+    <div class="link">
+      <a href="/">
+        <button class="outline outline-purple-400  px-4 rounded-md
+        shadow-lg  py-1 mt-10 max-md:hidden 
+        text-white font-mono font-bold text-xl hover:bg-slate-100
+        hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Donate</button>
+    </a>
+
+    
+
  
   
+  
+</div>
+  
   <!-- Hamburger button -->
-  <button type="button" id='burg' class="mt-2 block text-gray-500 hover:text-white focus:text-white focus:outline-none mr-10 visible sm:hidden">
-    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24 ">
+  <button type="button" id='burg' class="mt-5 block text-gray-500 hover:text-white focus:text-white focus:outline-none  visible md:hidden">
+    <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24 ">
       <path id="ham" class="visible"  fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
       <path id="x" class="hidden"  fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
 

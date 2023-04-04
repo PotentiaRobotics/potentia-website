@@ -1,5 +1,6 @@
 ---
 var {title} = Astro.props;
+var backgroundColor = Astro.props;
 ---
 
 <html lang="en">
@@ -10,7 +11,9 @@ var {title} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+
+
+	<body class='bg-slate-800'>
         <slot></slot>
 
 	</body>
