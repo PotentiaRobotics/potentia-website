@@ -1,0 +1,19 @@
+---
+var {title, button, image} = Astro.props;
+---
+
+
+<div class="bg-zinc-900    hover:border rounded-xl">
+    <img src={image} alt="" class="  h-14 content-none ml-4 mt-2">
+
+    <h1 class=" ml-5 text-blue-400 text-2xl font-bold font-mono">{title} </h1>
+
+   <p class="  text-blue-300 mr-14 ml-5 text-xl font-serif font-light"><slot></slot> </p>
+  
+   <!-- Button -->
+  
+   <a href="/team" class="ml-1"  >
+    <button class="rounded-md  py-2 px-4  text-blue-100 font-serif  text-xl">{button}</button>
+  </a>
+
+  </div>

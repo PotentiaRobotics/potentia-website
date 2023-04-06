@@ -2,6 +2,7 @@
 // Image imports
 import logo from "../images/logo.png";
 // Components---
+import OutlineButton from "../components/buttons/OutlineButton.astro";
 ---
 
 <header class="h-auto bg-slate-800  " id="nav">
@@ -29,19 +30,11 @@ import logo from "../images/logo.png";
   </div>
   
 <!-- Button -->
-    <div class="link">
-      <a href="/">
-        <button class="outline outline-purple-400  px-4 rounded-md
-        shadow-lg  py-1 mt-6 max-md:hidden 
-        text-white font-mono font-bold text-xl hover:bg-slate-100
-        hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Donate</button>
+    <div class="link mt-6">
+      
+        <OutlineButton text="Donate" link="/" />
+        
     </a>
-
-    
-
- 
-  
-  
 </div>
   
   <!-- Hamburger button -->
@@ -52,22 +45,28 @@ import logo from "../images/logo.png";
 
     </svg>
   </button>
-
-  
 </div>
 
 <!-- Mobile pages -->
   <div id="links" class="hidden ml-8 flex flex-col text-white font-semibold px-2 pt-1 pb-4 text-lg  space-y-1">
-    <a href="/" class=" hover:bg-slate-700 rounded">Page 1</a>
-    <a href="/" class=" hover:bg-slate-700 rounded">Page 2</a>
-    <a href="/" class=" hover:bg-slate-700 rounded">Page 2</a>
+    <a href="/" class=" hover:bg-slate-700 rounded">Team</a>
+    <a href="/" class=" hover:bg-slate-700 rounded">Olympian </a>
+    <a href="/" class=" hover:bg-slate-700 rounded">Contact</a>
+    <a href="/" class="">  
+      <button class="outline outline-purple-400  px-2 rounded-md
+      shadow-lg   text-white font-mono font-bold text-xl hover:bg-slate-100 hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Donate</button></a>
+    
+     
+
   </div>
-  </div>
 
 
-
+</div>
 </header>
 
+
+
+<!-- Scripts -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu

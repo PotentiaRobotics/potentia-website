@@ -5,11 +5,16 @@ import Layout from '../layouts/Layout.astro';
 // Components
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Card from '../components/cards/Card.astro';
+import TimelineCard from '../components/cards/TimelineCard.astro';
+import Timeline from '../components/Timeline.astro';
+
 //Image import
 import olympian_hero from '../images/olympian_hero.png';
 import team_pic from '../images/team_pic.png';
 import olympian1 from '../images/olympian1.png';
 import atom from '../images/atom_icon.png';
+import OutlineButton from '../components/buttons/OutlineButton.astro';
 
 ---
 
@@ -20,27 +25,22 @@ import atom from '../images/atom_icon.png';
     <Nav></Nav>
 
 
-    <!-- First section -->
+<!--Header Section -->
     <div class="flex flex-row mt-10 justify-between mb-20 space-x-10 max-lg:flex-col space-y-11 max-lg:text-center">
       <!-- Title -->
         
-          <h1 class="ml-36   mt-20 text-6xl w-[14em] text-white font-semibold font-sans max-lg: max-sm:w-3/4">Potentia Is On The <br>  Next  Level Of Tech</h1>
+          <h1 class="mx-auto xl:ml-32 max-md:w-  mt-20 text-6xl w-[14em] text-white font-semibold font-sans max-lg: max-md:w-3/4 max-lg:">Potentia Is On The <br>  Next  Level Of Tech</h1>
       
 
         <!-- Subheading -->
         <div class="mx-auto ">
-          <h3 class="mr-40  mx-auto text-xl w-[22em] text-gray-500 font-medium font-serif ">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch.<br> PLEASE let me out the basement anish 😭 </h3>
+          <h3 class="mr-40  mx-auto text-xl w-[22em] text-blue-300 font-medium font-serif ">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch.<br> PLEASE let me out the basement anish 😭 </h3>
           <!-- Buttons -->
-          <div class="space-x-4 flex flex-row ">
+          <div class="space-x-4 flex flex-row mt-8 ">
+           <OutlineButton text="Help" link="hellp"></OutlineButton>
             <a href="/">
-                <button class="outline outline-purple-400  px-4 rounded-md
-                shadow-lg  py-1 mt-10 max-md:hidden 
-                text-white font-mono font-bold text-xl hover:bg-slate-100
-                hover:text-purple-400 hover:shadow-purple-600  transition-all duration-300">Fund</button>
-            </a>
-            <a href="/">
-                <button class="  px-4 rounded-md
-                shadow-lg  py-1 mt-10 max-md:hidden 
+               <button class="  px-4 rounded-md
+                shadow-lg  py-1  max-md:hidden 
                 text-yellow-300 font-mono font-bold text-xl
                transition-all duration-300">Learn More ↗️</button>
             </a>
@@ -53,104 +53,31 @@ import atom from '../images/atom_icon.png';
  
 
 
-    <!-- Next section -->
+    <!-- Card Section -->
 
 
-    <div class="flex flex-row mt-14 mb-10 space-x-1 ">
-
-      <!-- 1st Card -->
-
-      <div class="bg-gray-900  w-full   hover:border rounded-xl">
-        <img src={atom} alt="" class="  h-14 content-none ml-6 mt-6">
-        <h1 class="mt-4 ml-6 text-white text-2xl font-bold font-mono">Olympian </h1>
-       <p class="mt-2 mb-6 text-gray-300 mr-14 ml-5 text-xl font-serif font-light">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch. </p>
-      
-       <!-- Button -->
-      
-       <a href="/team" class="ml-3"  >
-        <button class="rounded-md  py-2 px-4  text-white font-serif  text-xl">Learn More ↗️ </button>
-      </a>
-      </div>
-
-      <!-- 2nd Card -->
-
-
-    
-      <div class="bg-gray-900  w-full mx-4 ml-20 hover:border rounded-xl">
-        <img src={atom} alt="" class="  h-14 content-none ml-6 mt-6">
-        <h1 class="mt-4 ml-6 text-white text-2xl font-bold font-mono">Olympian </h1>
-       <p class="mt-2 mb-6 text-gray-300 mr-14 ml-5 text-xl font-serif font-light">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch. </p>
-      
-       <!-- Button -->
-      
-       <a href="/team" class="ml-3"  >
-        <button class="rounded-md  py-2 px-4  text-white font-serif  text-xl">Learn More ↗️ </button>
-      </a>
-      </div>
-
-      <!-- 3rd Card -->
-      
+    <div class="flex flex-row mt-14 mb-10 space-x-44 mx-12 max-md:flex-col max-md:space-x-0 max-md:space-y-4">
+      <!-- Cards Card -->
      
-      <div class="bg-gray-900  w-full mx-4 ml-20 hover:border rounded-xl">
-        <img src={atom} alt="" class="  h-14 content-none ml-6 mt-6">
-        <h1 class="mt-4 ml-6 text-white text-2xl font-bold font-mono">Olympian </h1>
-       <p class="mt-2 mb-6 text-gray-300 mr-14 ml-5 text-xl font-serif font-light">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch. </p>
-      
-       <!-- Button -->
-      
-       <a href="/team" class="ml-3"  >
-        <button class="rounded-md  py-2 px-4  text-white font-serif  text-xl">Learn More ↗️ </button>
-      </a>
-      </div>
-
-
-      <!-- 4th card -->
-
-      <div class="bg-gray-900   w-full mx-4 ml-20 hover:border rounded-xl">
-        <img src={atom} alt="" class="  h-14 content-none ml-6 mt-6">
-        <h1 class="mt-4 ml-6 text-white text-2xl font-bold font-mono">Olympian </h1>
-       <p class="mt-2 mb-6 text-gray-300 mr-14 ml-5 text-xl font-serif font-light">Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch. </p>
-      
-       <!-- Button -->
-      
-       <a href="/team" class="m-3"  >
-        <button class="rounded-md  py-2 px-4  text-white font-serif  text-xl">Learn More ↗️ </button>
-      </a>
-      </div>
-
-      
-
-      <!-- Second card -->
-
-      
-
-    
-
-
-
-
+      <Card title="Title" image={atom} button="Learn More ↗️" >Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch </Card>
+      <Card title="Title" image={atom} button="Learn More ↗️" >Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch </Card>
+      <Card title="Title" image={atom} button="Learn More ↗️" >Potentia Robotics is the first high school team to design and build a fully-functional humanoid robot entirely from scratch </Card>
     </div>
-     
+
+
+
+    <!-- Timeline -->
+    <div class="text-center mb-10 mt-36">
+      <h1 class="mb-10 text-4xl text-white font-semibold">Updates</h1>
+    </div>
+
+    <div class="justify-center flex ">
+      <Timeline></Timeline>
+    </div>
+
 
  
-	<!-- Banner -->
-  <div class="relative mt-8  items-center ">
-    <img src={olympian_hero} class=" rounded-2xl brightness-50 contrast-75 object-none w-screen h-[24rem]" />
-      <!-- Headers -->
-   
-      <!-- Button -->
-        <h1 class="font-bold  text-center text-xl mt-2">
-        <a href="/team"  >
-          <button class="  outline outline-orange-400   rounded-md
-          shadow-lg  py-2 px-4 mt-7
-          text-white bg-cyan-700 font-mono font-bold text-xl hover:bg-white
-          hover:text-cyan-400 hover:shadow-cyan-600  transition-all duration-300">Meet the Team </button>
-        </a> 
-      
-      </h1>
-        <!-- Button -->
-        
-    </div>
+	
 </div>
 
   

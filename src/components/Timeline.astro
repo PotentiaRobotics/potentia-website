@@ -1,0 +1,35 @@
+---
+var {time, title, text } = Astro.props
+import TimelineCard from './cards/TimelineCard.astro'
+
+import AlertButton from './buttons/AlertButton.astro'
+---
+
+
+<ol class="relative border-l border-gray-200 dark:border-gray-700">                  
+   
+
+   <TimelineCard title="Website Finished" date="April 28 2023" >
+    <div slot="title">
+        <AlertButton>Hello</AlertButton>
+    </div>
+    The website has finally been finished after living for 1 month in Anish's basement. He finaly released me. FREEDOM!!!
+    </TimelineCard>
+
+   <TimelineCard title="Website Finished" date="April 28 2023" >
+    <div slot="title">
+        <AlertButton>Hello</AlertButton>
+    </div>
+    The website has finally been finished after living for 1 month in Anish's basement. He finaly released me. FREEDOM!!!
+    </TimelineCard>
+
+
+    <TimelineCard title="Website Finished" date="April 28 2023" >
+    <div slot="title">
+        <AlertButton>Hello</AlertButton>
+    </div>
+
+    The website has finally been finished after living for 1 month in Anish's basement. He finaly released me. FREEDOM!!!
+    </TimelineCard>
+ 
+</ol>
