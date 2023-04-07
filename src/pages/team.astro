@@ -1,0 +1,55 @@
+---
+//Layout imports
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+//Component Imports
+import PersonCard from '../components/cards/PersonCard.astro';
+import Tag from '/src/components/buttons/Tag.astro';
+//Image imports
+import Ram from '/src/images/people/ram.png';
+import Anish from '/src/images/people/anish.jpg';
+
+
+
+---
+
+<Layout title="| Team">
+<!-- Navbar -->
+<Nav> <span slot="team" class="text-blue-300">TEAM</span></Nav>
+
+<!-- Header -->
+<h1 class="text-blue-300 text-center my-10 font-bold text-3xl font-mono">Meet our team</h1>
+
+
+<!-- Grid of people -->
+<div class=" flex flex-col">
+    <!-- Row 1 -->
+    <div class="mx-20 flex flex-row space-x-20">
+        <PersonCard title="Ram Vempati" image={Ram}>
+            Hello my name is ram and I am from tech support.
+            <div slot="tags">
+                <Tag>Potentia Lead</Tag>
+                <Tag>Engineering</Tag>
+                <Tag>Gait Generation</Tag>
+            </div>
+        </PersonCard>
+        <PersonCard title="Anish Suvurna" image={Anish}>
+            Hello my name is anish and I trap kids in my basmeent.
+            <div slot="tags">
+                <Tag>Engineering</Tag>
+                <Tag>Computer Vision</Tag>
+                <Tag>Creepy</Tag>
+            </div>
+        </PersonCard>
+
+    </div>
+
+
+</div>
+
+
+
+    <!-- Footer -->
+    <Footer></Footer>
+</Layout>

@@ -22,9 +22,10 @@ import OutlineButton from "../components/buttons/OutlineButton.astro";
     
     <div class="text-xl font-mono space-x-24 max-lg:space-x-12 text-slate-300  duration-500 max-md:space-x-4  object-cover">
       
-      <a href="/"  class="hover:text-gray-400">TEAM</a>
-      <a href="/" class="hover:text-gray-400">O L Y M P I A N</a>
-      <a href="/" class="hover:text-gray-400">CONTACT</a>
+      <a href="/team"  class="hover:text-gray-400"><slot name="team">TEAM</slot></a>
+      <a href="/olympian"  class="hover:text-gray-400 font-bold"><slot name="olympian">O L Y M P I A N</slot></a>
+      <a href="/contact"  class="hover:text-gray-400"><slot name="contact">CONTACT</slot></a>
+      
     </div>  
     
   </div>
@@ -119,5 +120,9 @@ import OutlineButton from "../components/buttons/OutlineButton.astro";
     }
   });
   
+
+
+  
+
 </script>
 
