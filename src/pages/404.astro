@@ -1,0 +1,37 @@
+---
+//Layout imports
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+//Component Imports
+import OutlineButton from '/src/components/buttons/OutlineButton.astro'
+//Image imports
+import rooms from '/src/images/rooms.jpg';
+
+
+---
+
+<Layout title="| Success!!">
+<!-- Audio -->
+
+
+<section class=" bg-gray-800 ">
+    <img src={rooms} class="w-full absolute ">
+    
+    <div class="relative py-10 px-4 mx-auto max-w-screen-md ">
+        <div class="relative h-32"></div>
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center  text-black">This page does not exist. Welcome to Anish's basement.</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center  text-gray-400 sm:text-xl"></p>
+
+
+        <div class="flex flex-row justify-center space-x-20">
+<OutlineButton link="/" text="Go Back Home" />
+        </div>
+        </div>
+</section>
+        
+
+
+
+    <!-- Footer -->
+</Layout>

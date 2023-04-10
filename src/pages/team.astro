@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 //Component Imports
 import PersonCard from '../components/cards/PersonCard.astro';
 import Tag from '/src/components/buttons/Tag.astro';
+import OutlineButton from '/src/components/buttons/OutlineButton.astro';
 //Image imports
 import Ram from '/src/images/people/ram.png';
 import Anish from '/src/images/people/anish.jpg';
@@ -22,30 +23,47 @@ import Anish from '/src/images/people/anish.jpg';
 <h1 class="text-blue-300 text-center my-10 font-bold text-3xl font-mono">Meet our team</h1>
 
 
-<!-- Grid of people -->
-<div class=" flex flex-col">
-    <!-- Row 1 -->
-    <div class="mx-20 flex flex-row space-x-20">
-        <PersonCard title="Ram Vempati" image={Ram}>
+
+<!-- Category buttons -->
+<div class="flex flex-row justify-center mb-20 space-x-14">
+    <!-- Leads -->
+    <button id="lead" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg" > Leads</button>
+    
+    <!-- Engineering -->
+    <button id="engineering" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg" > Engineering</button>
+
+</div>
+
+
+
+<div class="grid-cols-3 flex justify-center space-x-10 gap-y-10">
+    <!-- Engineering category -->
+    <div class=" hidden" id="engineeringDiv">
+
+        <PersonCard title="Ram Vempati" id="" image={Ram}>
             Hello my name is ram and I am from tech support.
             <div slot="tags">
-                <Tag>Potentia Lead</Tag>
+                <Tag>Lead</Tag>
                 <Tag>Engineering</Tag>
                 <Tag>Gait Generation</Tag>
             </div>
         </PersonCard>
-        <PersonCard title="Anish Suvurna" image={Anish}>
-            Hello my name is anish and I trap kids in my basmeent.
+
+    </div>
+    <!-- Engineering category -->
+    <div class=" hidden" id="leadDiv">
+
+        <PersonCard title="Anish suvurna" id="" image={Anish}>
+            Hello this is anish and i trap kids in my basement
             <div slot="tags">
-                <Tag>Engineering</Tag>
-                <Tag>Computer Vision</Tag>
-                <Tag>Creepy</Tag>
+                <Tag>Basement</Tag>
+                <Tag>CV</Tag>
+                <Tag>Programming</Tag>
+                <Tag>Lead</Tag>
             </div>
         </PersonCard>
 
     </div>
-
-
 </div>
 
 
@@ -53,3 +71,28 @@ import Anish from '/src/images/people/anish.jpg';
     <!-- Footer -->
     <Footer></Footer>
 </Layout>
+
+
+<!-- Script -->
+
+<!-- Show engineering div when the engineerng button is clicked -->
+<script>
+    // Engineering divs
+    document.getElementById("engineering").addEventListener("click", function(){
+        document.getElementById("engineeringDiv").classList.toggle("hidden");
+    });
+    // Lead Divs
+    document.getElementById("lead").addEventListener("click", function(){
+        document.getElementById("leadDiv").classList.toggle("hidden");
+    });
+    
+    
+    // Make buttons red on click
+    var buttons = document.getElementsByClassName("border-blue-400");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            this.classList.toggle("border-red-400");
+            this.classList.toggle("text-red-400");
+        });
+    }
+</script>

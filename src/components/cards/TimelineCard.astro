@@ -2,16 +2,22 @@
 var {title = "Title", date="Jan 1 2023"} = Astro.props;
 ---
 
-<li class="mb-10 ml-10 ">            
-    <span class="absolute flex items-center justify-center w-8 h-8  rounded-full -left-4 ring-8 ring-gray-900 bg-gray-900 text-blue-400 hover:ring-blue-500 hover:bg-blue-500 hover:text-gray-900 duration-300">
-        <svg aria-hidden="true" class="w-5 h-5 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+<li class="mb-12 ml-12  ">            
+    <span class="absolute flex items-center justify-center w-10 h-10  rounded-full -left-5  ring-8  ring-gray-900 bg-gray-900 text-blue-400 hover:ring-blue-500 hover:bg-blue-500 hover:text-gray-900 duration-300">
+        <svg aria-hidden="true" class="w-6 h-6 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
     </span>
+    
+    <time class="block mb-2 leading-none  ">
+        <button class="text-base font-extrabold mr-2 px-3 py-0.5 rounded-2xl bg-red-500 text-white  font-mono shadow-sm ">
+            {date}
+        </button>
+        
+    </time>
 
-    <h3 class="flex items-center mb-1 text-lg font-semibold text-white">{title}<slot name="title" ></slot></h3>
+    <h3 class="flex items-center mb-1 text-2xl font-semibold text-blue-300">{title}<slot name="title" ></slot></h3>
 
-    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">{date}</time>
 
-    <p class="mb-4 text-base font-normal  text-gray-400">
+    <p class=" w-[40em] max-md:w-full   mb-4 text-lg font-normal  text-gray-100">
     <slot>
          
     </slot>
