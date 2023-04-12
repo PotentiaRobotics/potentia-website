@@ -1,6 +1,10 @@
 ---
 var {title}  = Astro.props;
 var backgroundColor = Astro.props;
+
+//Imports
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -13,8 +17,14 @@ var backgroundColor = Astro.props;
 	</head>
 
 
-	<body class='bg-slate-800'>
+	<body class='bg-slate-900'>
+	
+
+		<!-- Content -->
         <slot></slot>
+
+		<!-- Footer -->
+		<Footer></Footer>
 
 	</body>
 </html>

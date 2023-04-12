@@ -22,23 +22,25 @@ import Anish from '/src/images/people/anish.jpg';
 <!-- Header -->
 <h1 class="text-blue-300 text-center my-10 font-bold text-3xl font-mono">Meet our team</h1>
 
-
+<!-- Instruction header -->
+<h2 id="h2" class="text-center text-3xl mb-10 font-bold font-mono text-white">Click the buttons to look at out amazing team !!!! <br>(You can select different categories !!!!!)</h2>
 
 <!-- Category buttons -->
 <div class="flex flex-row justify-center mb-20 space-x-14">
     <!-- Leads -->
-    <button id="lead" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg" > Leads</button>
+    <button id="lead" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg button hid" > Leads</button>
     
     <!-- Engineering -->
-    <button id="engineering" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg" > Engineering</button>
+    <button id="engineering" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg button hid" > Engineering</button>
 
 </div>
 
 
 
-<div class="grid-cols-3 flex justify-center space-x-10 gap-y-10">
+<div class="grid-cols-3 flex justify-center space-x-10 gap-y-10 mb-20">
     <!-- Engineering category -->
     <div class=" hidden" id="engineeringDiv">
+        
 
         <PersonCard title="Ram Vempati" id="" image={Ram}>
             Hello my name is ram and I am from tech support.
@@ -50,7 +52,7 @@ import Anish from '/src/images/people/anish.jpg';
         </PersonCard>
 
     </div>
-    <!-- Engineering category -->
+    <!-- Lead category -->
     <div class=" hidden" id="leadDiv">
 
         <PersonCard title="Anish suvurna" id="" image={Anish}>
@@ -68,8 +70,7 @@ import Anish from '/src/images/people/anish.jpg';
 
 
 
-    <!-- Footer -->
-    <Footer></Footer>
+   
 </Layout>
 
 
@@ -77,6 +78,9 @@ import Anish from '/src/images/people/anish.jpg';
 
 <!-- Show engineering div when the engineerng button is clicked -->
 <script>
+    var buttons = document.getElementsByClassName("button");
+
+
     // Engineering divs
     document.getElementById("engineering").addEventListener("click", function(){
         document.getElementById("engineeringDiv").classList.toggle("hidden");
@@ -88,11 +92,19 @@ import Anish from '/src/images/people/anish.jpg';
     
     
     // Make buttons red on click
-    var buttons = document.getElementsByClassName("border-blue-400");
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
             this.classList.toggle("border-red-400");
             this.classList.toggle("text-red-400");
         });
     }
+
+
+    // Remove h2 permenantly on button click
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            document.getElementById("h2").remove()
+        });
+    } 
+    
 </script>
