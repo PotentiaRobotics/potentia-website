@@ -6,10 +6,11 @@ import Footer from '../components/Footer.astro';
 //Component Imports
 import PersonCard from '../components/cards/PersonCard.astro';
 import Tag from '/src/components/buttons/Tag.astro';
-import OutlineButton from '/src/components/buttons/OutlineButton.astro';
+// import OutlineButton from '/src/components/buttons/OutlineButton.astro';
 //Image imports
 import Ram from '/src/images/people/ram.png';
 import Anish from '/src/images/people/anish.jpg';
+import Sanjay from '/src/images/people/sanjay.png';
 
 
 
@@ -27,22 +28,30 @@ import Anish from '/src/images/people/anish.jpg';
 
 <!-- Category buttons -->
 <div class="flex flex-row justify-center mb-20 space-x-14">
-    <!-- Leads -->
+    <!-- Buttons -->
     <button id="lead" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg button hid" > Leads</button>
-    
-    <!-- Engineering -->
+     
     <button id="engineering" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg button hid" > Engineering</button>
+    <button id="website" class="border-blue-400 text-blue-500 text-lg font-bold font-mono  px-2 py-2 border-2 rounded-lg button hid" > Website</button>
 
 </div>
 
 
 
 <div class="grid-cols-3 flex justify-center space-x-10 gap-y-10 mb-20">
+
+
+
+
+
+
+
+
     <!-- Engineering category -->
     <div class=" hidden" id="engineeringDiv">
         
 
-        <PersonCard title="Ram Vempati" id="" image={Ram}>
+        <PersonCard name="Ram Vempati" id="" image={Ram}>
             Hello my name is ram and I am from tech support.
             <div slot="tags">
                 <Tag>Lead</Tag>
@@ -52,10 +61,15 @@ import Anish from '/src/images/people/anish.jpg';
         </PersonCard>
 
     </div>
+
+
+
     <!-- Lead category -->
     <div class=" hidden" id="leadDiv">
 
-        <PersonCard title="Anish suvurna" id="" image={Anish}>
+
+
+        <PersonCard name="Anish suvurna" id="" image={Anish}>
             Hello this is anish and i trap kids in my basement
             <div slot="tags">
                 <Tag>Basement</Tag>
@@ -65,7 +79,48 @@ import Anish from '/src/images/people/anish.jpg';
             </div>
         </PersonCard>
 
+
+
     </div>
+    
+    <!-- website category -->
+    <div class=" hidden" id="websiteDiv">
+
+
+
+        <PersonCard name="Sanjay" id="" image={Sanjay}>
+            yo
+            <div slot="tags">
+                <Tag>Website Creator</Tag>
+                <Tag>Control Systems</Tag>
+                <Tag>Programming</Tag>
+                <Tag>Engineering</Tag>
+            </div>
+        </PersonCard>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -85,11 +140,24 @@ import Anish from '/src/images/people/anish.jpg';
     document.getElementById("engineering").addEventListener("click", function(){
         document.getElementById("engineeringDiv").classList.toggle("hidden");
     });
+
     // Lead Divs
     document.getElementById("lead").addEventListener("click", function(){
         document.getElementById("leadDiv").classList.toggle("hidden");
     });
     
+    // Website Divs
+    document.getElementById("website").addEventListener("click", function(){
+        document.getElementById("websiteDiv").classList.toggle("hidden");
+    });
+
+
+
+
+
+
+
+
     
     // Make buttons red on click
     for (var i = 0; i < buttons.length; i++) {
